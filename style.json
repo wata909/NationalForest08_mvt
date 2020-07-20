@@ -41,7 +41,7 @@
     "rapid-raster": {
       "type": "raster",
       "tiles": [
-        "https://www.finds.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png"
+        "http://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png"
       ],
       "minzoom": 0,
       "maxzoom": 17

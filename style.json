@@ -97,7 +97,7 @@
       "id": "forest",
       "type": "fill",
       "source": "forest",
-      "source-layer": "forest",
+      "source-layer": "nationalforest",
       "minzoom": 7,
       "maxzoom": 18,
       "paint": {

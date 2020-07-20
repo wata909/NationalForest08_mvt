@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>植生図閲覧サイト（テスト）</title>
+        <title>国有林小班図（茨城県・テスト）</title>
         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.6.1/mapbox-gl.css' rel='stylesheet' />
@@ -25,7 +25,7 @@
         <script>
             var map = new mapboxgl.Map({
                 container: 'map',
-                style: './vg-style.json',
+                style: './style.json',
                 zoom: 11,
                 center: [140.1007, 36.2342],
                 hash: true,
@@ -105,14 +105,16 @@
                 map.addControl(new SwitchLayerControl(swoptions), 'top-right');
             });
 
-            map.on('click', 'vg', function(e) {
+            map.on('click', 'forest', function(e) {
                 var feature = e.features[0];
                 var description = "<p>";
-                    description += "MAJOR1: ";
-                    description += feature.properties["MAJOR1"];
+                    description += "小班: ";
+                    description += feature.properties["A45_001"];
                     description += "<br>";
-                    description += "NAME: ";
-                    description += feature.properties["NAME"];
+                    description += "小班名称: ";
+                    description += feature.properties["A45_010"];
+                    description += "林小班名称: ";
+                    description += feature.properties["A45_011"];
                     description += "</p>"
                 new mapboxgl.Popup()
                     .setLngLat(e.lngLat)

@@ -38,14 +38,6 @@
       "maxzoom": 18,
       "attribution": "国土地理院"
     },
-    "rapid-raster": {
-      "type": "raster",
-      "tiles": [
-        "http://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png"
-      ],
-      "minzoom": 0,
-      "maxzoom": 17
-    },
     "gsi-vector": {
       "type": "vector",
       "tiles": [
@@ -79,16 +71,6 @@
       "source": "gsi-sml",
       "minzoom": 0,
       "maxzoom": 18,
-      "layout": {
-        "visibility": "none"
-      }
-    },
-    {
-      "id": "rapid-raster",
-      "type": "raster",
-      "source": "rapid-raster",
-      "minzoom": 0,
-      "maxzoom": 17,
       "layout": {
         "visibility": "none"
       }

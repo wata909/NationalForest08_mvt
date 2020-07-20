@@ -96,8 +96,8 @@
     {
       "id": "forest",
       "type": "fill",
-      "source": "vg",
-      "source-layer": "vg",
+      "source": "forest",
+      "source-layer": "forest",
       "minzoom": 7,
       "maxzoom": 18,
       "paint": {

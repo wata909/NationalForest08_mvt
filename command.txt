@@ -1,0 +1,19 @@
+ながの　8/226/100
+
+いばらき
+8/227/100
+
+tippecanoe --output-to-directory=mvt --layer=nationalforest --maximum-zoom=g --no-tile-compression --simplify-only-low-zooms A45-19_20.geojson
+
+no-line-simplification
+tippecanoe --output-to-directory=no-line-simplification --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression --no-line-simplification A45-19_08.geojson
+
+-pf -pk -ps 
+tippecanoe --output-to-directory=pf-pk-ps --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -pf -pk -ps A45-19_08.geojson
+
+--coalesce 
+tippecanoe --output-to-directory=pf-pk-ps-coalesce --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -pf -pk -ps --coalesce A45-19_08.geojson
+
+
+-ps -an
+tippecanoe --output-to-directory=ps-aN --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -ps -aN A45-19_08.geojson

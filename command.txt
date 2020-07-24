@@ -8,12 +8,38 @@ tippecanoe --output-to-directory=mvt --layer=nationalforest --maximum-zoom=g --n
 no-line-simplification
 tippecanoe --output-to-directory=no-line-simplification --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression --no-line-simplification A45-19_08.geojson
 
--pf -pk -ps 
-tippecanoe --output-to-directory=pf-pk-ps --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -pf -pk -ps A45-19_08.geojson
-
 --coalesce 
 tippecanoe --output-to-directory=pf-pk-ps-coalesce --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -pf -pk -ps --coalesce A45-19_08.geojson
 
+-pf -pk -ps 
+tippecanoe --output-to-directory=pf-pk-ps --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -pf -pk -ps A45-19_08.geojson
 
 -ps -an
-tippecanoe --output-to-directory=ps-aN --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -ps -aN A45-19_08.geojson
+tippecanoe --output-to-directory=ps-an --layer=nationalforest -R 8/227/100 --maximum-zoom=8 --minimum-zoom=8 --no-tile-compression -ps -an A45-19_08.geojson
+
+
+(base) iwasaki@apocrypha:/mnt/d/DOC/Dropbox/GitHub/maff_fude_exp$ tippecanoe --output-to-directory=ps-an --layer=nationalforest -R 7/114/47 --maximum-zoom=7 --minimum-zoom=7 --no-tile-compression -ps -an tile07_114_47.geojson
+254475 features, 16871760 bytes of geometry, 8 bytes of separate metadata, 1924709 bytes of string pool
+tile 7/114/47 size is 4699113 with detail 12, >500000
+Going to try keeping the biggest 9.58% of the features to make it fit
+tile 7/114/47 size is 1137861 with detail 12, >500000
+Going to try keeping the biggest 3.79% of the features to make it fit
+  99.9%  7/114/47
+(base) iwasaki@apocrypha:/mnt/d/DOC/Dropbox/GitHub/maff_fude_exp$ tippecanoe --output-to-directory=coalesce --layer=nati
+onalforest -R 7/114/47 --maximum-zoom=7 --minimum-zoom=7 --no-tile-compression --coalesce tile07_114_47.geojson
+254475 features, 16706067 bytes of geometry, 8 bytes of separate metadata, 1924709 bytes of string pool
+tile 7/114/47 size is 4374699 with detail 12, >500000
+tile 7/114/47 size is 1928114 with detail 11, >500000
+tile 7/114/47 size is 518269 with detail 10, >500000
+  99.9%  7/114/47
+(base) iwasaki@apocrypha:/mnt/d/DOC/Dropbox/GitHub/maff_fude_exp$ tippecanoe --output-to-directory=coalesce-ps --layer=n
+ationalforest -R 7/114/47 --maximum-zoom=7 --minimum-zoom=7 --no-tile-compression --coalesce -ps tile07_114_47.geojson
+254475 features, 16706067 bytes of geometry, 8 bytes of separate metadata, 1924709 bytes of string pool
+tile 7/114/47 size is 4850251 with detail 12, >500000
+tile 7/114/47 size is 1996361 with detail 11, >500000
+tile 7/114/47 size is 519903 with detail 10, >500000
+  99.9%  7/114/47
+(base) iwasaki@apocrypha:/mnt/d/DOC/Dropbox/GitHub/maff_fude_exp$ tippecanoe --output-to-directory=coalesce-ps-pk-pf --l
+ayer=nationalforest -R 7/114/47 --maximum-zoom=7 --minimum-zoom=7 --no-tile-compression --coalesce -ps -pf -pk tile07_11
+4_47.geojson
+254475 features, 16706067 bytes of geometry, 8 bytes of separate metadata, 1924709 bytes of string pool
